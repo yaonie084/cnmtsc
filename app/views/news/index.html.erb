@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "news" %>
+<div class="content">
+  <div class="mod titbox"><h1>新闻中心</h1></div>
+  <div class="mod newslist">
+<ul><li>·<a target="_blank" href="http://news.qq.com/a/20110717/000526.htm">习近平抵拉萨参加庆祝西藏和平解放60周年活动</a>　<span class="pub_time">07月17日&nbsp;19:05</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000511.htm">中国与伊朗签署40亿美元协议 涉及矿藏能源等</a>　<span class="pub_time">07月17日&nbsp;18:27</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000512.htm">美国华侨华人谴责奥巴马会见达赖</a>　<span class="pub_time">07月17日&nbsp;18:18</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000509.htm">中国地震局公开三公经费 去年公车费4100万元</a>　<span class="pub_time">07月17日&nbsp;18:14</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000486.htm">中国地震局公布三公经费 去年支出6367万元</a>　<span class="pub_time">07月17日&nbsp;16:54</span>
+</li></ul>
+    <ul><li>·<a target="_blank" href="http://news.qq.com/a/20110717/000480.htm">三部门联手发通知要求加强寄递渠道治安管理</a>　<span class="pub_time">07月17日&nbsp;16:34</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000481.htm">最高法要求各级法院充分发挥审判职能</a>　<span class="pub_time">07月17日&nbsp;16:13</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000478.htm">下周或迎三公经费公布高峰 多部门经费不降反升</a>　<span class="pub_time">07月17日&nbsp;15:56</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000456.htm">2010年中国企业并购交易额居全球第二位</a>　<span class="pub_time">07月17日&nbsp;15:32</span>
+</li>
+<li>·<a target="_blank" href="http://news.qq.com/a/20110717/000451.htm">法媒称白宫刻意低调安排奥巴马与达赖会晤</a>　<span class="pub_time">07月17日&nbsp;15:06</span>
+</li></ul>
+    <% @news.each_with_index do |new, index| %>
+      <% if index == 0 or index%5 == 0 %>
+        <ul>
+      <% end %>
+          <li>
+            <%= link_to new.title, new %> <span class="pub_time"> <%= new.created_at.to_s%>  </span>
+          </li>
+      <% if index == 4 or (index-4)%5 == 0 %>
+        </ul>
+      <% end %>
+
+    <% end %>
+  </div>
+
+
+<br />
+</div>

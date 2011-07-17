@@ -1,0 +1,27 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<h2>产品展示</h2>
+
+<ul class="shortcut-buttons-set">
+	<li><%= link_to "返回控制面板", admin_root_path(), :class => "shortcut-button home" %></li>
+	<li><%= link_to "添加产品", new_admin_product_path(), :class => "shortcut-button artist" %></li>
+</ul>
+
+<div class="clear"></div>
+
+<div class="content-box">
+	<div class="content-box-header">
+		<h3>产品列表</h3>
+	</div>
+
+	<div class="content-box-content">
+		<% if @products.blank? %>
+			<p>暂无产品,您可以<%= link_to "添加产品", new_admin_product_path() %>！</p>
+		<% else %>
+			<%= render "entries" %>
+		<% end %>
+	</div>
+</div>

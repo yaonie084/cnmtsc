@@ -1,0 +1,38 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+
+<table>
+	<thead>
+		<tr>
+			<th><%= :verify %></th>
+			<th><%= :safement %></th>
+			<th><%= :title %></th>
+			<th><%= :description %></th>
+                        <th><%= :tel %></th>
+                        <th><%= :user %></th>
+                        <th><%= :avatar %></th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @products.each do |product| %>
+		<tr>
+			<td><%= product.verify %></td>
+			<td><%= product.safement %></td>
+			<td><%= product.title %></td>
+                        <td><%= product.description %></td>
+                        <td><%= product.tel %></td>
+                        <td><%= product.user %></td>
+			<td><%= image_tag product.avatar(:thumb) %></td>
+			<td>
+				<%= link_to "edit", edit_admin_product_path(product), :title => :edit, :class => "edit" %>&nbsp;
+				<%= link_to "delete", admin_product_path(product), :method => :delete, :confirm => :delete, :title => :delete, :class => "delete" %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

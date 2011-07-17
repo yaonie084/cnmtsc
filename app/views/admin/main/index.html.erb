@@ -1,0 +1,25 @@
+<h2>内容管理</h2>
+<ul class="shortcut-buttons-set">
+	
+        <li><%= link_to "产品管理", admin_products_path(), :class => "shortcut-button product" %></li>
+	<li><%= link_to "新闻管理", admin_news_index_path(), :class => "shortcut-button episode" %></li>
+	<li><%= link_to "消息管理", admin_messages_path(), :class => "shortcut-button music" %></li>
+	<li><%= link_to "页面管理", admin_root_path(), :class => "shortcut-button page" %></li>
+	
+	<div class="clear"></div>
+	<li><%= link_to "分类管理", admin_root_path(), :class => "shortcut-button category" %></li>
+	
+	<li><%= link_to "艺术家管理", admin_root_path(), :class => "shortcut-button artist" %></li>
+	<li><%= link_to "媒体印象", admin_root_path(), :class => "shortcut-button press" %></li>
+</ul>
+<div class="clear"></div>
+
+<h2>系统管理</h2>
+<ul class="shortcut-buttons-set">
+	<li><%= link_to "反馈管理", admin_root_path(), :class => "shortcut-button feedback" %></li>
+	<li><%= link_to "系统用户管理", admin_root_path(), :class => "shortcut-button user" %></li>
+	<li><%= link_to "当前用户密码修改", admin_root_path(), :class => "shortcut-button password" %></li>
+	<li><%= link_to "前往 cnmtsc.com", root_path(), :class => "shortcut-button home", :target => "_blank" %></li>
+</ul>
+<%= current_user.login %>
+<div class="clear"></div>

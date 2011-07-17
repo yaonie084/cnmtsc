@@ -1,0 +1,94 @@
+<div class="content">
+
+            <h1 class="logo"><a href="http://www.qianxun.com" title="千寻网">千寻网</a></h1>
+
+            <div class="h_right">
+
+                <ul class="h_menu">
+
+                    <div id="shortcut">
+
+                        <ul>
+
+                          <li class="fore1" id="loginfo">您好！欢迎来到川南煤炭市场网！&nbsp;&nbsp;&nbsp;
+                              <span>
+                                  <% if current_user == nil %>
+                                  <%= link_to "[请登录]", login_url %>，新用户？<%= link_to "[免费注册]", register_url %>
+                                <% else %>
+                                  用户名:<%= link_to "#{current_user.login}", root_url %>, <%= link_to "[退出]", logout_url %>
+                                <% end %>
+
+                              </span></li>
+
+                            <li class="fore2"><%= link_to "我的订单", profile_url %></li>
+
+                            <li><%= link_to "我的空间", profile_url %></li>
+
+                        </ul>
+
+                        <span class="clr"></span>
+
+                    </div>
+
+                </ul>
+
+                <div class="search_div">
+
+                    <form name="search" method="get" action="http://search.qianxun.com/search">
+
+                        <input name="keyword" type="text"  class="search_input" />
+
+                        <input name="" type="submit" class="search_btn" onmouseover="this.className='search_btn_on'" onmouseout="this.className='search_btn'" />
+
+                    </form>
+
+                </div>
+
+                <div class="clr"></div>
+
+                热卖分类：<a href="#" class="f_939393">电煤供应</a>  <a href="#">原煤</a>  <a href="#"class="f_939393">川西北煤炭供应</a>  <a href="">川南煤炭市场企业标志</a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="clr"></div>
+
+        <div class="nav_bg">
+
+            <div class="content">
+
+                <div class="nav">
+
+
+
+                    <ul  class="banner">
+
+
+                        <%= menu_nav :home do %><%= link_to "首页", root_path() %><% end %>
+                        <%= menu_nav :new do %><%= link_to "新闻", news_index_path() %><% end %>
+                        <%= menu_nav :product do %><%= link_to "产品", products_path() %><% end %>
+
+                    </ul>
+
+
+
+	<input type="hidden" class='bannerv'; value="index" />
+
+                </div>
+
+            </div>
+
+        </div>

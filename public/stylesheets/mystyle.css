@@ -1,0 +1,84 @@
+/* 
+    Document   : mystyle
+    Created on : 2011-7-17, 16:04:15
+    Author     : administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+.Wrap_cart{width:930px;margin:0 auto;position:relative;}
+.round{height:10px; border-top:3px #f11a5d solid;}/*background:url(images/cart_bg_11.gif) repeat-x 0 top;*/
+.lround{width:10px;height:10px;float:left;}/*background:url(images/cart_bg_09.gif) no-repeat left top;*/
+.rround{width:10px;height:10px;float:right;}/*background:url(images/cart_bg_10.gif) no-repeat right top;*/
+.cart_table .member-price{position:relative;z-index:1;zoom:1;}
+.cart_table .member-price .price{position:relative;padding-right:10px;zoom:1;}
+.cart_table .member-price .price b{position:absolute;right:0;top:6px;width:7px;height:4px;overflow:hidden;background:url(http://misc.360buyimg.com/201007/skin/df/i/bg_shortcut.gif) -230px -25px no-repeat;}
+.cart_table .member-price .items{display:none;position:absolute;right:2px;top:18px;width:170px;padding:6px;border:1px solid #EFDB7B;background:#FFFFEF;text-align:left;}
+.cart_table .member-price .items ul{margin-bottom:5px;text-align:right;}
+.cart_table .member-price .items span{color:#f00;}
+.cart_table .member-price .items p{color:#9C9A9C;}
+.cart_table .member-price .items a:link,.cart_table .member-price .items a:visited{color:#005aa0;}
+.cart_table .hover{z-index:2;}
+.cart_table .hover .items{display:block;}
+/*Header_cart*/
+.Header_cart{width:100%;padding:20px 0;overflow:hidden;}
+.Logo{float:left;margin:10px 20px 0 0;}
+.Order_cart{width:438px;height:29px;float:left;padding-top:23px;}
+#Order_cart_S1{background:url(images/warebuy1.jpg) no-repeat;}
+#Order_cart_S1 .step1{color:#fff;}
+#Order_cart_S2{background:url(images/warebuy2.jpg) no-repeat;}
+#Order_cart_S2 .step2{color:#fff;}
+#Order_cart_S3{background:url(images/warebuy3.jpg) no-repeat;}
+#Order_cart_S3 .step3{color:#fff;}
+.Order_cart li{float:left;line-height:29px;padding-left:8px;font-weight:bold;}
+.Order_cart .step1{width:120px;}
+.Order_cart .s1complete{}
+.Order_cart .step2{width:155px;}
+.Order_cart .s2complete{}
+.Order_cart .step3{}
+/*mycart_tip*/
+.mycart_tip{height:50px;line-height:50px;}
+.mycart_tip img{float:left;}
+/*List_cart*/
+.List_cart{border:0px solid #ccc;}
+.List_cart h2{height:28px;line-height:28px;background: #f11a5d;}/*url(images/cart_bg_05.gif) no-repeat right top*/
+.List_cart h2 strong{display:block;height:28px;padding:0 20px;color:#FFF;}/*background:url(images/cart_bg_03.gif) no-repeat left top;*/
+.cart_table{width:890px;border:solid #f11a5d;border-width:0 3px;padding:20px 17px 0;overflow:hidden;}
+tr.Thead,td.Tfoot{background:#fbfbfb;}
+
+.Product_List_S3 li dt img{height:100px;width:100px;}
+#sbox_3{margin-top:10px;overflow:hidden;}
+#sbox_3 .c-top{ background:url(images/br0603.gif);height:7px;overflow:hidden}
+#sbox_3 .c-bot{background:url(images/br0603.gif) 0 -7px;height:7px;overflow:hidden}
+#sbox_3 .content_right{border:solid #ffc26c;border-width:0 3px;padding:0 10px 0;}
+#sbox_3  h3{background:url(http://www.360buy.com/images/arrow_2.gif) no-repeat 0 center;padding-left:20px;height:30px;line-height:30px}
+#sbox_3 .Product_List_S3{height:150px;}
+#sbox_3 .Product_List_S3 li{background:none}
+#sbox_3 .Product_List_S3  dl{background:none; overflow:hidden;zoom:1}
+#sbox_3 .Product_List_S3 li dt{float:left}
+#sbox_3 .Product_List_S3  dd{text-align:left;margin-left:105px;}
+#sbox_3 .Product_List_S3  dd .p_Name{height:55px}
+#sbox_3 .Product_List_S3  dd .p_Price{color:#f00}
+#sbox_3 #Tab h3 ul{float:right;padding:0}
+.num li{float:left;background:url(images/bg0603.gif) no-repeat;height:15px;line-height:15px;width:15px;text-align:center;font-size:10px;margin-right:5px; cursor:pointer;color:#ccc;font-weight:normal}
+.Product_List_S3 li{width:33.3%;float:left}
+.num li.on{color:#333}
+.content_right{position:relative;}
+.content_right .ad {width:100%;height:130px;overflow:hidden;position:relative;}
+.content_right .slider,.content_right .num{position:absolute;}
+.content_right .slider{width:100%}
+.content_right .num{ right:5px;top:5px;}
+*html .content_right .num{ right:50px;}
+.slider li {list-style:none;display:inline;}
+#sbox_3 .Product_List_S3 li{height:130px;overflow:hidden;border:none}
+
+
+
+.cart_table .Table .p-img img{border:1px solid #dddddd;width:50px;height:50px;vertical-align:middle}
+.cart_table .Table .p-img{float:left;margin-right:10px;vertical-align:middle}
+.cart_table .Table .align_Left{vertical-align:middle}
+.cart_table td{padding:2px}

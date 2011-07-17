@@ -1,0 +1,94 @@
+<%= stylesheet_link_tag "common" %>
+<div class="Wrap_cart">
+  <div id="Top1_FeeInfo" class="mycart_tip">
+
+    <%= image_tag "cart_001.gif" %>
+
+  </div>
+  <%= semantic_form_for(@order) do |f|%>
+    <div class="List_cart">
+      <h2><strong>我挑选的商品</strong></h2>
+      <div class="cart_table">
+        <!--商品列表开始-->
+        <div id="productList">
+
+          <table class="Table" cellpadding="0" cellspacing="0" width="100%" id="CartTb">
+            <tbody><tr class="align_Center Thead">
+                <td>商品名称</td>
+                <td width="8%">赠送积分</td>
+                <td width="9%">商品数量</td>
+              </tr>
+
+              <tr class="align_Center">
+                <td class="align_Left"><div class="p-img"><%=  image_tag @product.avatar(:thumb)%></a></div><span><%= link_to @product.title, @product %></span></td>
+
+                <td>0</td>
+                <td>
+                  <%= f.input :amount, :label => false%>
+                  <%= f.input :product_id, :as => :hidden%>
+                </td>
+              </tr>
+
+            </tbody></table>
+
+        </div>
+
+        <div style="margin:8px 0 0 0;display:none">
+          <table class="Table" cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr class="align_Center">
+                <td style="height:27px;text-align:left;background:#EBF4FB none repeat scroll 0 0;">添加新商品：</td>
+              </tr>
+              <tr class="align_Center">
+                <td style="height:27px;text-align:left">
+                  <input type="button" value="添加商品" onclick="AddProductOnEdit(this)" style="border:#AACDED 1px solid;background:#EBF4FB;font-size:12px;height:20px;padding-top:2px;cursor:pointer">
+                </td>
+              </tr>
+            </tbody></table>
+        </div>
+
+
+
+        <!--商品列表结束-->
+        <ul class="cart_op" style="margin-bottom:0px;">
+          <!--		<li class="li4"><a href="#none" onclick='this.blur();saveCart();' clstag='clickcart|keycount|shoppingcartpop|savecartlink'>寄存购物车</a></li> -->
+
+          <li class="li3">
+            <div id="submit_info">
+            </div>
+            <div id="submit_btn" style="text-align:right">
+
+              <img src="http://www.360buy.com/purchase/skin/images/fqbtn.gif" id="gotoOrderInfo_fq" onclick="runOrderInfo_fq(this);" style="cursor:pointer;border:none;display:none;" alt="进入分期订单">
+
+              <%= link_to "返回购物", products_path() , :id => "continueBuyBtn"%>
+              
+              <%= f.buttons do %>
+                <%= f.commit_button %>
+              <% end %>
+              <% end %>
+
+            </div>
+            <div style="padding-right:9px;text-align:right;border:#fff 1px solid;" id="submit_error"></div>
+            <input type="button" id="BtnRunOrder_server" style="display:none" onclick="runOrderInfo_server(this);" value="提交">
+
+          </li>
+        </ul>
+
+        <!--[if !IE]>删除区<![endif]-->
+        <div id="DeledSkuInfo" style="display:none">
+          <div id="divDeledSkuTitle">
+            已删除商品，您可以重新购买或加入收藏夹：
+          </div>
+          <div id="divDeledSku"></div>
+        </div>
+
+        <!--[if !IE]>延保商品<![endif]-->
+        <br>
+        <div id="ybPanel"></div>
+        <script type="text/javascript">getCartYbInfo();</script>
+
+
+
+      </div>
+      <div class="round"><div class="lround"></div><div class="rround"></div></div>
+    </div>
+  </div>

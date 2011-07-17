@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="head_extra">
+    <div class="preview">
+      <div id="preview"><%= image_tag @product.avatar(:normal) %></div>
+
+    </div>
+    <div class="summary">
+      <h1><%= @product.title %></h1>
+      <ul style="z-index:10;position:relative;">
+        <li><span class="fl"><span>库&nbsp;&nbsp;&nbsp;&nbsp;存：现货</span></span></li>
+        <li><span class="fl"><span><strong>已销售:</strong>10000吨</span></span></li>
+      </ul>
+      
+      <div class="choose">
+        <h2>产品详情:</h2>
+        <div style="padding:12px; line-height: 25px;"><%= @product.description %></div>
+      </div>
+      <%= link_to "购买", order_new_path(@product), :id=>"InitCartUrl", :class=>"shopping" %>
+      <%= link_to "咨询", message_new_path(@product), :id=>"", :class=>"btn-coll addpage" %>
+              
+    </div>
+
+  </div>
+</div>

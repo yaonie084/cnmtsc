@@ -1,0 +1,16 @@
+<%= form_for @user_session, :url => user_session_path() do |f| %>
+<p>
+	<%= f.label :login, "用户名" %>
+	<%= f.text_field :login, :class => "text-input" %>
+</p>
+<div class="clear"></div>
+<p>
+	<%= f.label :password, "密码" %>
+	<%= f.password_field :password, :class => "text-input" %>
+</p>
+
+<div class="clear"></div>
+<p>
+	<%= f.submit "登录", :class => "button" %>
+</p>
+<% end %>

@@ -1,0 +1,18 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<%= form.inputs do %>
+	<%= form.input :verify, :input_html => { :class => "text-input medium-input" } %>
+	<%= form.input :safement, :input_html => { :class => "text-input medium-input" } %>
+	<%= form.input :title, :input_html => { :class => "text-input medium-input" } %>
+        <%= form.input :description, :input_html => { :class => "text-input medium-input" } %>
+        <%= form.input :tel, :input_html => { :class => "text-input medium-input" } %>
+        <%= form.input :user, :input_html => { :class => "text-input medium-input" } %>
+        <%= form.input :avatar, :as => :file, :hint => "请务必上传艺术家的头像！或者代表图!" %>
+<% end %>
+
+<%= form.buttons do %>
+	<%= form.commit_button :button_html => { :class => "button" } %>
+<% end %>
+

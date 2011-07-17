@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Ekhlas 后台管理系统</title>
+
+	<%= stylesheet_link_tag "admin/reset", "admin/style", "admin/invalid", "admin/blue" %>
+
+	<!--[if lte IE 7]>
+	<%= stylesheet_link_tag "admin/ie" %>
+	<![endif]-->
+
+	<%= javascript_include_tag "jquery-1.5.1", "rails", "admin" %>
+
+	<!--[if IE 6]>
+	<%= javascript_include_tag "DD_belatedPNG_0.0.8a" %>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('.png_bg, img, li');
+	</script>
+	<![endif]-->
+
+	<%= csrf_meta_tag %>
+
+	<%= yield :head %>
+</head>
+
+<body>
+	<div id="body-wrapper">
+
+		<div id="sidebar">
+			<%= render "admin/shared/sidebar" %>
+		</div>
+
+		<div id="main-content"> <!-- Main Content Section with everything -->
+
+			<% flash.each do |type, message| -%>
+			<div class="notification <%= type %> png_bg">
+				<a class="close" href="#"><img alt="close" title="Close this notification" src="/images/admin/icons/cross_grey_small.png"></a>
+				<div><%= message %></div>
+			</div>
+			<% end -%>
+
+			<%= yield %>
+
+			<div id="footer">
+				<small>&copy; Copyright 2010 Ekhlas | <a href="#">返回顶部</a></small>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<h3>用户管理模块</h3>
+
+<ul class="shortcut-buttons-set">
+	<li><%= link_to "返回控制面板", admin_root_path(), :class => "shortcut-button home" %></li>
+	<li><%= link_to "返回用户管理列表", admin_users_path(), :class => "shortcut-button user" %></li>
+</ul>
+
+<div class="clear"></div>
+
+<div class="content-box">
+	<div class="content-box-header">
+		<h3>修改用户</h3>
+	</div>
+
+	<div class="content-box-content">
+		<%= semantic_form_for(@user, :url => admin_user_path(@user)) do |f| %>
+			<%= render :partial => 'form', :object => f %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,50 @@
+<div>
+  <h1>我发布的产品</h1>
+<table>
+	<thead>
+		<tr>
+			<th>名称</th>
+			<th>审核状态</th>
+                        <th>通过安全认证</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @as_sellers.each do |product| %>
+		<tr>
+			<td><%= product.title %></td>
+			<td><%= product.verify %></td>
+			<td><%= product.safement %></td>
+
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+</div>
+
+<div>
+  <h1>我购买的产品</h1>
+<table>
+	<thead>
+		<tr>
+			<th>名称</th>
+			<th>订单状态</th>
+                        <th>交易量</th>
+                        <th>交易细节</th>
+
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @as_buyers.each do |order| %>
+		<tr>
+			<td><%= order.product.title %></td>
+			<td><%= order.seccess %></td>
+			<td><%= order.amount %></td>
+                        <td><%= order.detail %></td>
+
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+</div>

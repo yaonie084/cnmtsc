@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  amount: 1
+  detail: MyText
+  seccess: false
+  user: 
+  product: 
+
+two:
+  amount: 1
+  detail: MyText
+  seccess: false
+  user: 
+  product: 

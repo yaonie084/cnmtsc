@@ -1,0 +1,392 @@
+<script type="text/javascript">
+
+$(function(){
+
+	$("#KinSlideshow").KinSlideshow({
+
+			moveStyle:"up",
+
+			intervalTime:4,
+
+			mouseEvent:"mouseover",
+
+			isHasTitleBar:false,
+
+			isHasTitleFont:false,
+
+			titleBar:{titleBar_height:30,titleBar_bgColor:"#000000"},
+
+			titleFont:{TitleFont_size:14,TitleFont_color:"#fff"},
+
+			btn:{btn_bgColor:"#fff",btn_bgHoverColor:"#bd0c3a",
+
+			btn_fontColor:"#ff004c",btn_fontHoverColor:"#fff",btn_fontFamily:"Verdana",
+
+			btn_borderColor:"#ff004c",btn_borderHoverColor:"#ff004c",
+
+			btn_borderWidth:1,btn_bgAlpha:1} //按钮样式设置，(isHasBtn = true 前提下启用)
+
+
+
+	});
+
+});
+
+
+
+</script>
+
+
+
+
+
+<div class="content">
+
+	<div class="index_list">
+
+    <a href="#" target="_blank" ><img src="http://images.shop.360buy.com/popstreet/201106/15/logo_14logo_191621.jpg" /></a>
+
+<a href="#" target="_blank" ><img src="http://images.shop.360buy.com/popstreet/201104/17/logo_14logo2_152708.jpg" /></a>
+
+<a href="#" target="_blank" ><img src="http://adimg.adtpl.360buy.com/uploads/promotion/promotion-images/2011/05/18/20110518013502Nv.jpg" /></a>
+
+<a href="#" target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201104/17/logo_14logo13_153814.jpg" /></a>
+
+<a href="#"  target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201104/22/logo_14logotaipingniao_145157.jpg" /></a>
+
+<a href="#" target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201105/16/logo_14logowsm_143251.jpg" /></a>
+
+<a href="#" target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201104/22/logo_14logoLUNA_145148.jpg" /></a>
+
+<a href="#" target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201104/17/logo_14logo3_152743.jpg" /></a>
+
+<a href="#" target="_blank" ><img src="http://images.shop.360buy.com/popstreet/201105/16/logo_makehuafei_143554.jpg" /></a>
+
+<a href="#" target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201104/17/logo_14logo1_152612.jpg" /></a>
+
+<a href="#" target="_blank" ><img src="http://images.shop.360buy.com/popstreet/201104/17/logo_14logo6_153109.jpg" /></a>
+
+<a href="#" target="_blank"  ><img src="http://images.shop.360buy.com/popstreet/201104/17/logo_14logo7_153305.jpg" /></a>
+
+<a href="#" target="_blank" ><img src="http://images.shop.360buy.com/popstreet/201106/21/logo_14logo_183435.jpg" /></a>
+
+<a href="#" target="_blank" ><img src="http://images.shop.360buy.com/popstreet/201106/01/logo_14logoGXG_144440.jpg" /></a>
+
+
+
+
+
+    </div>
+
+    <div class="index_r_top">
+
+    	<div class="idnex_r_ad">
+
+        	<div id="KinSlideshow" style="visibility:hidden;">
+
+                    <a href="#" target="_blank"><img src="/system/home/1.jpg" alt="#" width="780" height="265" /></a>
+
+
+
+<a href="#" target="_blank"><img src="/system/home/2.jpg" alt="#" width="780" height="265" /></a>
+
+
+
+<a href="#" target="_blank"><img src="/system/home/3.jpg" alt="#" width="780" height="265" /></a>
+
+
+
+<a href="#" target="_blank"><img src="/system/home/4.jpg" alt="#" width="780" height="265" /></a>
+
+                           <a href="#" target="_blank"><img src="/system/home/5.jpg" alt="www.qianxun.com" width="780" height="265" /></a>
+
+
+
+
+            </div>
+
+        </div>
+
+		<!-- picrotate_left start  -->
+
+		<div class="index_scroll">
+
+                  <h1>川南煤炭市场网</h1>
+                  <p>网站成立于2005年，是国内知名的煤炭销售平台。</p>
+                  <p>在泸州市党和政府的支持下，网站越办越好。真心感谢共产党。</p>
+
+		</div>
+
+
+
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="index_newbg">
+
+    	<h2>新品上市</h2>
+
+        <ul class="tags">
+
+            <li id="one_1" onmouseover="tagOver('one',1,3)" onmouseout="tagOut();" class="hover"></li>
+
+            <li id="one_2"></li>
+
+            <li id="one_3"></li>
+
+        </ul>
+
+        <div class="clr"></div>
+
+        <ul class="newsa" id="con_one_1">
+
+            <li class="img-ad"><a href="http://search.qianxun.com/search?keyword=LILY" target="_blank"><img src="http://images.shop.360buy.com/popstreet/201106/24/button_345200lily_185741.jpg" width="345" height="200" alt="" /></a></li>
+
+
+
+                <% @products.each do |product| %>
+                <li>
+
+                  <a href= <%= product_path(product) %> target="_blank" title="">
+                    <%= image_tag product.avatar(:normal)  %>
+                  </a>
+                  <h5 class="c-name">
+                  <%= link_to product.title, product %>
+                  </h5>
+                  
+                  <h6 class="c-price">
+                    <%= image_tag "blueask.png", :style => "" %>
+                    
+                    <%= link_to "向卖家询价", message_new_path(product), :style => "" %>
+                  </h6>
+                </li>
+                <% end %>
+
+
+                </ul>
+
+        
+
+       
+
+    </div>
+
+
+
+     <div class="w_clothing1">
+
+    	<h2>精品女装</h2>
+
+        <span><a href="http://search.qianxun.com/search?keyword=amii&=%CC%E1%BD%BB%B2%E9%D1%AF"  target="_blank" >新品上市</a> | <a href="http://search.qianxun.com/search?keyword=%C1%AC%D2%C2%C8%B9&=%CC%E1%BD%BB%B2%E9%D1%AF"  target="_blank">连衣裙</a> | <a href="http://search.qianxun.com/search?keyword=%B0%EB%C9%ED%C8%B9"  target="_blank">半身裙</a> | <a href="http://search.qianxun.com/search?keyword=%B6%CCT%D0%F4" target="_blank" >短T恤</a> | <a href="http://search.qianxun.com/search?keyword=%B5%F5%B4%F8" target="_blank" >吊带</a> | <a href="http://search.qianxun.com/search?keyword=%B3%C4%C9%C0" target="_blank" >衬衫</a> | <a href="http://search.qianxun.com/search?keyword=%D5%EB%D6%AF%C9%C0+%C5%AE" target="_blank" >针织衫</a> | <a href="http://search.qianxun.com/search?keyword=%C5%A3%D7%D0%BF%E3+%C5%AE" target="_blank" >牛仔裤</a> | <a href="http://search.qianxun.com/search?keyword=%B7%E7%D2%C2+%C5%AE
+
+" target="_blank" >风衣</a></span>
+
+    </div>
+
+    <div class="w_leftimg"><a href="http://search.qianxun.com/search?keyword=WHITE+COLLAR+%B0%D7%C1%EC&=%CC%E1%BD%BB%B2%E9%D1%AF" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201105/25/button_bailing_102913.jpg" width="250" height="435" alt="" /></a></div>
+
+    <div class="w_mid_index">
+
+    	<ul>
+
+        	        		<li>
+
+                <a href="http://www.qianxun.com/product/1000477040.html" target="_blank" title="">
+
+                <img onerror="this.src2='http://misc.qianxun.com/images/none130.gif'" alt="222十衣素 2011夏装新品 波点收腰 麻裙 修身 气质连衣裙 L3399"
+
+                	src2="http://img10.360buyimg.com/n3/7034/9cebb951-9ddd-4940-877d-1bcb7d8f1a22.jpg"  class="ulimg" width="130" height="130">
+
+                </a>
+
+                <h5 class="c-name"><a href="http://www.qianxun.com/product/1000477040.html" target="_blank" title="">十衣素 2011夏装新品 波点收腰 麻裙 修身 气质连衣裙 L3399</a></h5>
+
+                <h6 class="c-price">千寻价:<strong><span id="pbhptar"><img src2="http://qxprice.360buyimg.com/gp1000477040,2.png " onerror="noprice(this)"></span></strong>
+
+                </h6>
+
+            	</li>
+
+            </li>
+
+                		<li>
+
+                <a href="http://www.qianxun.com/product/1000285572.html" target="_blank" title="">
+
+                <img onerror="this.src2='http://misc.qianxun.com/images/none130.gif'" alt="222Aozi奥姿条纹连衣裙SH126"
+
+                	src2="http://img12.360buyimg.com/n3/5894/8abda68b-e729-4d02-b007-44515bfe3b11.jpg"  class="ulimg" width="130" height="130">
+
+                </a>
+
+                <h5 class="c-name"><a href="http://www.qianxun.com/product/1000285572.html" target="_blank" title="">Aozi奥姿条纹连衣裙SH126</a></h5>
+
+                <h6 class="c-price">千寻价:<strong><span id="rtxwjdo"><img src2="http://qxprice.360buyimg.com/gp1000285572,2.png " onerror="noprice(this)"></span></strong>
+
+                </h6>
+
+            	</li>
+
+            </li>
+
+                		<li>
+
+                <a href="http://www.qianxun.com/product/1000263417.html" target="_blank" title="">
+
+                <img onerror="this.src2='http://misc.qianxun.com/images/none130.gif'" alt="222裂帛 春夏新款 花色大摆裙 拼接半身裙 蓝花印 4620"
+
+                	src2="http://img12.360buyimg.com/n3/8978/5af93d7a-1416-41c4-bced-77fa94a3ca92.jpg"  class="ulimg" width="130" height="130">
+
+                </a>
+
+                <h5 class="c-name"><a href="http://www.qianxun.com/product/1000263417.html" target="_blank" title="">裂帛 春夏新款 花色大摆裙 拼接半身裙 蓝花印 4620</a></h5>
+
+                <h6 class="c-price">千寻价:<strong><span id="ejjfssa"><img src2="http://qxprice.360buyimg.com/gp1000263417,2.png " onerror="noprice(this)"></span></strong>
+
+                </h6>
+
+            	</li>
+
+            </li>
+
+                		<li>
+
+                <a href="http://www.qianxun.com/product/1000580902.html" target="_blank" title="">
+
+                <img onerror="this.src2='http://misc.qianxun.com/images/none130.gif'" alt="222轻薄豹纹蕾丝花边 雪纺短裙女装 洛熙 A9098"
+
+                	src2="http://img12.360buyimg.com/n3/5288/cf789950-ee1e-494b-90b5-1a56e94d7e1e.jpg"  class="ulimg" width="130" height="130">
+
+                </a>
+
+                <h5 class="c-name"><a href="http://www.qianxun.com/product/1000580902.html" target="_blank" title="">轻薄豹纹蕾丝花边 雪纺短裙女装 洛熙 A9098</a></h5>
+
+                <h6 class="c-price">千寻价:<strong><span id="uuembud"><img src2="http://qxprice.360buyimg.com/gp1000580902,2.png " onerror="noprice(this)"></span></strong>
+
+                </h6>
+
+            	</li>
+
+            </li>
+
+                		<li>
+
+                <a href="http://www.qianxun.com/product/1000100986.html" target="_blank" title="">
+
+                <img onerror="this.src2='http://misc.qianxun.com/images/none130.gif'" alt="222艾米（AMII）印花连衣裙 B3NC1060204"
+
+                	src2="http://img11.360buyimg.com/n3/5018/00d9371c-9cc3-4406-a389-6f80fd188644.jpg"  class="ulimg" width="130" height="130">
+
+                </a>
+
+                <h5 class="c-name"><a href="http://www.qianxun.com/product/1000100986.html" target="_blank" title="">艾米（AMII）印花连衣裙 B3NC1060204</a></h5>
+
+                <h6 class="c-price">千寻价:<strong><span id="jhvyidn"><img src2="http://qxprice.360buyimg.com/gp1000100986,2.png " onerror="noprice(this)"></span></strong>
+
+                </h6>
+
+            	</li>
+
+            </li>
+
+                		<li>
+
+                <a href="http://www.qianxun.com/product/1000557677.html" target="_blank" title="">
+
+                <img onerror="this.src2='http://misc.qianxun.com/images/none130.gif'" alt="222海洋呼唤海军风条纹连衣裙无配饰2102322027"
+
+                	src2="http://img12.360buyimg.com/n3/5114/2140885a-41e5-4925-a526-0a8bb1c078f0.jpg"  class="ulimg" width="130" height="130">
+
+                </a>
+
+                <h5 class="c-name"><a href="http://www.qianxun.com/product/1000557677.html" target="_blank" title="">海洋呼唤海军风条纹连衣裙无配饰2102322027</a></h5>
+
+                <h6 class="c-price">千寻价:<strong><span id="ceftydp"><img src2="http://qxprice.360buyimg.com/gp1000557677,2.png " onerror="noprice(this)"></span></strong>
+
+                </h6>
+
+            	</li>
+
+            </li>
+
+                </ul>
+
+    </div>
+
+    <div class="w_right">
+
+    	<h2 class="w_fashion">时尚混搭</h2>
+
+        <a href="http://p.qianxun.com/ilike/qiaoyisi846087/index.html" title="" target="_blank"><img src2="http://ilike.360buy.com/uploads/promotion/promotion-images/2011/07/08/20110708070425OB.jpg" width="190" height="175" alt="" class="w_f_img" /></a>
+
+        <div class="w_f_news">
+
+        	<h2>流行前线</h2>
+
+            <ul>
+
+                <li><a href="http://search.qianxun.com/search?keyword=%C4%DD%DC%BD%B5%D9%CB%B9" title="" target="_blank">爱出色就穿出色 GO</a></li>
+
+<li><a href="http://search.qianxun.com/search?keyword=white+collar" title="" target="_blank">白领时尚 办公室换装热潮</a></li>
+
+<li><a href="http://p.qianxun.com/ilike/handouyishe1665057/index.html" title="" target="_blank">外出踏青让休闲“潮”一点</a></li>
+
+<li><a href="http://p.qianxun.com/ilike/handouyishe1665057/index.html" title="" target="_blank">初夏美裙搭配全攻略</a></li>
+
+<li><a href="http://p.qianxun.com/ilike/lanhaiwan161062/index.html
+
+" title="" target="_blank">100款夏日淑女装 人气超UP</a></li>
+
+            </ul>
+
+        </div>
+
+        <ul class="w_links">
+
+                <li><a href="http://search.qianxun.com/search?keyword=%D2%C1%DC%BD%D0%C4%D4%C3" title="" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201106/24/logo_yifuxinyue_141023.jpg" width="88" height="31" alt="" /></a></li>
+
+<li class="m" ><a href="http://search.qianxun.com/search?keyword=LILY" title="" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201106/24/logo_lily_141448.gif" width="88" height="31" alt="" /></a></li>
+
+<li><a href="http://search.qianxun.com/search?keyword=betu%B0%D9%CD%BC&cid=&ev=&psort=5" title="" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201105/19/logo_3_162349.gif" width="88" height="31" alt="" /></a></li>
+
+<li class="m"><a href="http://search.qianxun.com/search?keyword=%B0%D7%C1%EC&=%CC%E1%BD%BB%B2%E9%D1%AF" title="" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201105/19/logo_4_162418.jpg" width="88" height="31" alt="" /></a></li>
+
+<li class="mb"><a href="http://search.qianxun.com/search?keyword=%CD%FE%CB%BF%C2%FC&cid=&ev=&psort=5" title="" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201105/19/logo_5_162456.jpg" width="88" height="31" alt="" /></a></li>
+
+<li class="m mb"><a href="http://search.qianxun.com/search?keyword=%B0%AC%B7%F2%CB%B9&cid=&ev=&psort=5" title="" target="_blank"><img src2="http://images.shop.360buy.com/popstreet/201105/19/logo_6_162536.jpg" width="88" height="31" alt="" /></a></li>
+
+        </ul>
+
+    </div>
+
+
+
+  <div class="clr"></div>
+
+
+
+
+        <ul class="w_links">
+
+           <li><a href="http://search.qianxun.com/search?keyword=%D2%BB%C9%FA%D2%BB%CA%AF" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2010/09/08/logo_20100908182326_10017.jpg" width="88" height="31" alt="" /></a></li>
+
+<li class="m" ><a href="http://search.qianxun.com/search?keyword=%D3%F9%C1%E9%D6%D0%B9%FA%D3%F1" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2010/10/13/logo_20101013200655_10076.jpg" width="88" height="31" alt="" /></a></li>
+
+<li><a href="http://search.qianxun.com/search?keyword=%E7%E6%C0%BC%D7%EA%CA%AF" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2010/12/28/logo_20101228182136_10081.jpg" width="88" height="31" alt="" /></a></li>
+
+<li class="m mb"><a href="http://search.qianxun.com/search?keyword=%C9%D0%CE%C4%D6%E9%B1%A6" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2011/03/23/logo_20110323232530_10672.jpg" width="88" height="31" alt="" /></a></li>
+
+<li><a href="http://search.qianxun.com/search?keyword=%BA%A3%C5%B8%B1%ED" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2011/03/10/logo_20110310122800_10507.gif" width="88" height="31" alt="" /></a></li>
+
+<li class="m"><a href="http://search.qianxun.com/search?keyword=%CC%EC%CD%F5%B1%ED" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2010/12/09/logo_20101209192641_10176.jpg" width="88" height="31" alt="" /></a></li>
+
+<li><a href="http://search.qianxun.com/search?keyword=%CD%FE%B8%EA%B1%ED" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2010/12/31/logo_20101231151750_10282.jpg" width="88" height="31" alt="" /></a></li>
+
+<li class="m"><a href="http://search.qianxun.com/search?keyword=%D2%C0%B2%A8%B1%ED" title="" target="_blank"><img src2="http://images.shop.360buy.com/shop/logo/2010/12/11/logo_20101211150901_10183.jpg" width="88" height="31" alt="" /></a></li>
+
+    </div>
+
+    </div>
+
+</div>

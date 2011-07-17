@@ -1,0 +1,24 @@
+
+
+<table>
+	<thead>
+		<tr>
+			<th>产品</th>
+			<th>电话</th>
+			<th>内容</th>
+
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @messages.each do |message| %>
+		<tr>
+			<td><%= link_to message.product.title, message.product %></td>
+			<td><%= message.tel %></td>
+			<td><%= message.content %></td>
+
+		</tr>
+		<% end %>
+	</tbody>
+</table>

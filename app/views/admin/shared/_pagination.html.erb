@@ -1,0 +1,4 @@
+<%- if pagination.total_pages <= 1 -%>
+<%- else -%>
+<%= will_paginate pagination, :previous_label => "上一页", :next_label => "下一页" %>
+<% end -%>

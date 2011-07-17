@@ -1,0 +1,14 @@
+<div class="content">
+  <h1>咨询服务</h1>
+  <%= @product.title %>
+  <div class="content-box-content">
+    <%= semantic_form_for(@message) do |f|%>
+      <%= f.input :tel, :label => "电话   " %><br />
+      <%= f.input :content, :label => "内容   " %>
+      <%= f.input :product_id, :as => :hidden%>
+      <%= f.buttons do %>
+        <%= f.commit_button :wrapper_html => { :style => "margin:10px;" }%>
+      <% end %>
+    <% end %>
+  </div>
+</div>

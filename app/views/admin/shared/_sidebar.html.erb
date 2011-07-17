@@ -1,0 +1,15 @@
+<div id="sidebar-wrapper">
+
+	<a href="<%= admin_root_path() %>"><h1 id="sidebar-title"></h1></a>
+
+	<div id="profile-links">
+		您好, <a href="#" title="Edit your profile"><%= current_user.login %></a>, you have <a href="#messages" rel="modal" title="3 Messages"><%= Message.count %> Messages</a><br />
+		<br />
+		<%= link_to "前往前台", root_path(), :title => "前往川南煤炭市场网前台" %> | <%= link_to "注销", user_session_path(), :method => :delete, :confirm => "确定要注销吗?" %>
+	</div>        
+
+	<%= render "admin/shared/main_nav" %>
+
+	<div id="messages" style="display: none"></div>
+
+</div>

@@ -1,0 +1,21 @@
+<h2>消息管理</h2>
+
+<ul class="shortcut-buttons-set">
+	<li><%= link_to "返回控制面板", admin_root_path(), :class => "shortcut-button home" %></li>
+</ul>
+
+<div class="clear"></div>
+
+<div class="content-box">
+	<div class="content-box-header">
+		<h3>消息列表</h3>
+	</div>
+
+	<div class="content-box-content">
+		<% if @messages.blank? %>
+			<p>暂无消息！</p>
+		<% else %>
+			<%= render "entries" %>
+		<% end %>
+	</div>
+</div>
